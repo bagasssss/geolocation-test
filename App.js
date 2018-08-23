@@ -17,7 +17,6 @@ export default class App extends React.Component {
     }
 
     onPressButton= () => {
-        Alert.alert('You tapped the button!');
         this.state.activeStatus === 'active' ? this.setState({activeStatus: 'passive', buttonLabel: 'Press to START'}) : this.setState({activeStatus: 'active',  buttonLabel: 'Press to STOP'});
         this.sendChangeStatus();
         if(this.state.activeStatus === 'active'){
